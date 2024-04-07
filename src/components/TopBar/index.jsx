@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { AppBar, Toolbar, Typography } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 import "./styles.css";
+import models from "../../modelData/models";
 
 /**
  * Define TopBar, a React component of Project 4.
@@ -18,13 +19,14 @@ function TopBar() {
   const currentView = pathParts[pathParts.length - 2];
 
   let title = "PhotoShare";
-
   if (currentView === "users") {
     const userId = pathParts[pathParts.length - 1];
-    title = `User Details: ${userId}`;
+    let currentUserName = models.userModel(userId).first_name
+    title = `User Details: ${currentUserName}`;
   } else if (currentView === "photos") {
     const userId = pathParts[pathParts.length - 1];
-    title = `Photos of ${userId}`;
+    let currentUserName = models.userModel(userId).first_name
+    title = `Photos of ${currentUserName}`;
   }
   return (
     <AppBar className="topbar-appBar" position="absolute">

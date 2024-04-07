@@ -41,7 +41,7 @@ function UserPhotos () {
                 <div key={comment._id}>
                   <Typography variant="body2">{formatDate(comment.date_time)}</Typography>
                   <Typography variant="body1">
-                    <Link to={`/user/${comment.user._id}`}>
+                    <Link to={`/users/${comment.user._id}`}>
                       {`${comment.user.first_name} ${comment.user.last_name}`}
                     </Link>: {comment.comment}
                   </Typography>
