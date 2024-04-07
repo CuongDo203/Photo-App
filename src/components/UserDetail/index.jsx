@@ -29,7 +29,7 @@ function UserDetail() {
       </CardContent>
       <CardActions>
         <Button component={Link} to={`/photos/${userId}`}>
-          Photos
+          View Photos
         </Button>
       </CardActions>
     </Card>
