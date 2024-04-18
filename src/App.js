@@ -21,7 +21,7 @@ const App = (props) => {
   return (
     <Router>
       <div>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} className="container">
           <Grid item xs={12}>
             <TopBar />
           </Grid>
@@ -43,7 +43,7 @@ const App = (props) => {
                   element={<UserPhotos />}
                 />
                 <Route path="/users" element={<UserList />} />
-                <Route path='*' element={<NoMatch/>}/>
+                <Route path='*' element={<NoMatch />} />
               </Routes>
             </Paper>
           </Grid>

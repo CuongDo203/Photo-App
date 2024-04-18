@@ -2,15 +2,15 @@ import React from "react";
 import { Grid, Card, CardMedia, CardContent, Typography } from "@mui/material";
 
 import "./styles.css";
-import {useParams, Link} from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import models from "../../modelData/models";
 
 /**
  * Define UserPhotos, a React component of Project 4.
  */
-function UserPhotos () {
+function UserPhotos() {
 
-     const { userId } = useParams();
+  const { userId } = useParams();
   const userPhotos = models.photoOfUserModel(userId);
 
   const formatDate = (dateString) => {
@@ -22,17 +22,18 @@ function UserPhotos () {
       hour: "numeric",
       minute: "2-digit",
     };
-    return new Intl.DateTimeFormat("en-US", options).format(date); 
+    return new Intl.DateTimeFormat("en-US", options).format(date);
   };
-    return (
-      <Grid container spacing={2}>
+  return (
+    <Grid container spacing={2} alignItems="center" justifyContent="center" className="container">
       {userPhotos.map((photo) => (
-        <Grid item xs={12} md={6} key={photo._id}>
-          <Card>
+        <Grid item xs={12} md={9} key={photo._id}>
+          <Card className="photoDesOfUser">
             <CardMedia
               component="img"
               image={require(`../../images/${photo.file_name}`)}
               alt={photo.file_name}
+              className="photo"
             />
             <CardContent>
               <Typography variant="body2">Date: {formatDate(photo.date_time)}</Typography>
@@ -52,7 +53,7 @@ function UserPhotos () {
         </Grid>
       ))}
     </Grid>
-    );
+  );
 }
 
 export default UserPhotos;

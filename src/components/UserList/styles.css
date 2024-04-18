@@ -1,0 +1,23 @@
+.sidebar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 60px;
+    z-index: 1;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+
+.header {
+    text-align: center;
+}
+
+.listUser {
+    list-style-type: none;
+    text-decoration: none;
+    background-color: #a2a8d3;
+    min-width: 150px;
+    text-align: center;
+    font-size: 25px;
+    width: 300px;
+}

@@ -29,7 +29,7 @@ function TopBar() {
     title = `Photos of ${currentUserName}`;
   }
   return (
-    <AppBar className="topbar-appBar" position="absolute">
+    <AppBar className="topbar-appBar">
       <Toolbar>
         <Typography
           variant="h6"
