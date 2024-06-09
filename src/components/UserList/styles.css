@@ -3,9 +3,13 @@
     left: 0;
     bottom: 0;
     top: 60px;
-    z-index: 1;
     border-right: 1px solid #ccc;
     border-top: 1px solid #ccc;
+    min-width: 290px;
+    width: 300px;
+    height: inherit;
+    z-index: 1;
+    overflow-y: scroll;
 }
 
 .header {
@@ -20,4 +24,27 @@
     text-align: center;
     font-size: 25px;
     width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.countBubble {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60px;
+    margin-right: 10px;
+}
+
+.numberOfPhotos, .numberOfComments {
+    width: 25px;
+    height: 25px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.numberOfComments {
+    background-color: red;
 }
